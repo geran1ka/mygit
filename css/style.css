@@ -1,3 +1,19 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-v26-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/nunito-v26-cyrillic_latin-700.woff2') format('woff2');
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,4 +22,263 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+.body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Nunito, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #221f1f;
+
+}
+
+.body--gift {
+  background: #b2e8e8 url('../img/bg-gift.jpg') center/cover;
+}
+
+.body--congratulation {
+  background: #fcc5bd url('../img/bg-congratulation.jpg') center/cover;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.header__logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gift {
+  padding: 20px 0 80px;
+}
+
+.gift__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.gift__description {
+  font-size: 20px;
+  margin: 0 0 50px;
+}
+
+.gift__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+
+.gift__card {
+  max-width: 580px;
+}
+
+.gift__swiper--card {
+  margin-bottom: 20px;
+}
+
+.gift__card-slide {
+border-radius: 20px;
+border: 2PX SOLID #4baa00;
+overflow: hidden;
+box-sizing: border-box;
+
+}
+
+.gift__card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gift__swiper--thumb {
+}
+
+.gift__card-thumb {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gift__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-items: start;
+}
+.form {
+}
+
+.form__label {
+  width: 100%;
+}
+
+.form__label-text {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form__field {
+  font: inherit;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dedede;
+  background-color: #fbfbfb;
+  padding: 8px 16px;
+  outline: none;
+}
+
+.form__field:hover,
+.form__field:focus-visible,
+.form__field:active {
+  border-color: #999;
+}
+
+.form__label--textarea {
+  grid-column: 1 / -1;
+}
+
+.form__field--textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form__button {
+  border-radius: 32px;
+  background-color: #4BAA00;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 8px 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.form__button:hover:not(:disabled) {
+  background-color: #58c601;
+}
+
+.form__button:focus-visible {
+  border-color: #58c601;
+}
+
+.form__button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+
+.form__button:disabled {
+  opacity: 0.4;
+}
+
+.congratulation {
+  padding: 20px 0 145px;
+  text-align: center;
+}
+
+.congratulation__title {
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.20;
+}
+
+.congratulation__description {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.congratulation__card {
+
+}
+
+.card {
+
+}
+
+.card__inner {
+
+}
+
+.card__front {
+
+}
+
+.card__img {
+  max-width: 580px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.card__back {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content min-content min-content;
+  margin: 0 auto;
+  max-width: 580px;
+  min-height: 375px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fff; 
+  text-align: start;
+}
+
+.card__title {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #F44;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__detail {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+
+}
+
+.card__subtitle {
+  opacity: 0.3;
+  max-width: 55px;
+  width: 100%;
+}
+
+.card__from {
+
+}
+
+.card__to {
+
+}
+
+.card__message {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 20px;
 }
