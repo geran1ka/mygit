@@ -7,7 +7,9 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://unpkg.com/imask" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
   <script src="js/script.js" defer></script>
 
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -26,7 +28,7 @@
   <main class="main-content">
     <section class="gift">
       <div class="container">
-        <h1 class="gift__title">Поздравьте близкого человека с праздником!</h1>
+        <h1 class="gift__title">Поздравьте близкого человека с&nbsp;праздником!</h1>
         <p class="gift__description">Выберите открытку и получатель получит ее на свой телефон</p>
 
         <div class="gift__wrapper">
@@ -34,19 +36,19 @@
             <div class="swiper gift__swiper gift__swiper--card">
               <div class="swiper-wrapper">
                 <div class="swiper-slide gift__card-slide">
-                  <img src="img/card_01.jpg" alt="Открытка №1" class="gift__card-image">
+                  <img src="img/card_01.jpg" alt="Открытка №1" class="gift__card-image" data-card="card_01">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="img/card_02.jpg" alt="Открытка №2" class="gift__card-image">
+                  <img src="img/card_02.jpg" alt="Открытка №2" class="gift__card-image" data-card="card_02">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="img/card_03.jpg" alt="Открытка №3" class="gift__card-image">
+                  <img src="img/card_03.jpg" alt="Открытка №3" class="gift__card-image" data-card="card_03">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="img/card_04.jpg" alt="Открытка №4" class="gift__card-image">
+                  <img src="img/card_04.jpg" alt="Открытка №4" class="gift__card-image" data-card="card_04">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="img/card_05.jpg" alt="Открытка №5" class="gift__card-image">
+                  <img src="img/card_05.jpg" alt="Открытка №5" class="gift__card-image" data-card="card_05">
                 </div>
               </div>
             </div>
@@ -75,12 +77,12 @@
           <form class="gift__form form">
             <label class="form__label">
               <span class="form__label-text">от кого</span>
-              <input class="form__field" type="text" name="sendler_name">
+              <input class="form__field" type="text" name="sender_name">
             </label>
 
             <label class="form__label">
               <span class="form__label-text">телефон отправителя</span>
-              <input class="form__field" type="text" name="sendler_phone">
+              <input class="form__field form__field--phone" type="text" name="sender_phone">
             </label>
 
             <label class="form__label">
@@ -90,13 +92,15 @@
 
             <label class="form__label">
               <span class="form__label-text">телефон получателя</span>
-              <input class="form__field" type="text" name="receiver_phone">
+              <input class="form__field form__field--phone" type="text" name="receiver_phone">
             </label>
 
             <label class="form__label form__label--textarea">
               <span class="form__label-text">поздравительный текст</span>
               <textarea class="form__field form__field--textarea" name="message" placeholder="Напишите теплые слова"></textarea>
             </label>
+
+            <input class="form__card" type="hidden" name="card"/>
 
             <button class="form__button" type="submit" disabled>Отправить</button>
 
